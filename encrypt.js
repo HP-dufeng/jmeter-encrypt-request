@@ -1,4 +1,4 @@
-log.info("---------------------------------------------------")
+log.info("------------ Start: encrypt sign ---------------------------------------")
 load(vars.get("crypto.js"));
 
 var argument = sampler.getArguments().getArgument(0);
