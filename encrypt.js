@@ -1,5 +1,5 @@
 log.info("------------ Start: encrypt sign ---------------------------------------")
-load(vars.get("crypto.js"));
+load(vars.get("crypto-js.js"));
 
 var argument = sampler.getArguments().getArgument(0);
 
@@ -27,7 +27,8 @@ function calcSign(data, signKey) {
        
        var kv = [];
        kv.push(signKey);
-       for (var v in keys) {
+       for (var index in keys) {
+           var v = keys[index];
            if(typeof(data[v])=='string'){
                 if(data[v]===''||data[v].replace(' ','')==='')
                 continue;
